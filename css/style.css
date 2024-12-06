@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Abel", serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+svg,
+i,
+button {
+  cursor: pointer;
+}
+.container2 {
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 1400px) {
+  .container2 {
+    width: 1350px;
+    margin: 0 auto;
+  }
+}
+@media(max-width:464px){
+    .links{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        gap: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        z-index: 999;
+
+    }
+    #check:checked ~ .links{
+        left: 0;
+    }
+}
